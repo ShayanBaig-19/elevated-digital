@@ -1,0 +1,4 @@
+﻿import { Link } from 'react-router-dom'
+import { ArrowUpRight } from 'lucide-react'
+export default function ProfileCard({ profile }) { return <article className="overflow-hidden rounded-3xl border border-border bg-background"><img src={profile.image} alt={profile.name} className="aspect-[4/3] w-full object-cover" loading="lazy" decoding="async" sizes="(min-width: 768px) 50vw, 100vw" /><div className="p-6"><p className="text-xs font-bold uppercase tracking-[.16em] text-accent">{profile.role}</p><h3 className="mt-2 text-2xl font-semibold">{profile.name}</h3><p className="mt-3 leading-7 text-secondary">{profile.bio}</p><Link to={`/about/${profile.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm font-bold hover:text-accent">Read more <ArrowUpRight size={16} /></Link></div></article> }
+
